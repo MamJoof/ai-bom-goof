@@ -1,0 +1,14 @@
+cd path/to/your-repo
+cat > .mcp.json << 'EOF'
+{
+  "mcpServers": {
+    "datadog": {
+      "type": "http",
+      "url": "https://mcp.datadoghq.com/api/unstable/mcp-server/mcp"
+    }
+  }
+}
+EOF
+git add .mcp.json
+git commit -m "Add Datadog MCP server config"
+git push
